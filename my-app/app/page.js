@@ -21,7 +21,7 @@ export default function Home() {
             .
           </li>
           <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
+            Hi there, this is a Next.js 13 app directory template
           </li>
         </ol>
 
