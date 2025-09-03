@@ -110,6 +110,9 @@ export default function Home() {
         </a>
         <div>
           <p>Here are some Documentation!</p>
+          <p>Happy coding! 🚀</p>
+          Buttons and logos from Vercel and Next.js are used under their respective trademarks. 
+          This template is provided for educational purposes and does not imply any official affiliation with Vercel or Next.js.
         </div>
       </footer>
     </div>
