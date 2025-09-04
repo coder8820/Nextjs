@@ -18,6 +18,9 @@ export default function Home() {
         >
           Click Me
         </button>
+        <div className="mt-6">
+          this is an image from public folder
+        </div>
       </div>
     </>
   );
