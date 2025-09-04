@@ -11,14 +11,9 @@ export default function Home() {
         onClick={() => alert('Hello, Next.js!')}
         >Hello, Next.js!</h1>
         <p className="mt-4 text-gray-400 max-w-md text-justify leading-relaxed">
-          lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-          quod, quia, voluptatum, voluptate quibusdam voluptates quae
-          voluptatibus quas quibusdam. Quisquam, quod, quia, voluptatum,
-          voluptate quibusdam voluptates quae voluptatibus quas quibusdam.
-          Quisquam, quod, quia, voluptatum, voluptate quibusdam voluptates quae
-          voluptatibus quas quibusdam.
+          This is a sample Next.js application demonstrating the use of Tailwind CSS for styling and interactivity with React components.
         </p>
-        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 cursor-pointer"
         onClick={() => alert('Button Clicked!')}
         >
           Click Me
