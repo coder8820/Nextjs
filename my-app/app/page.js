@@ -21,6 +21,7 @@ export default function Home() {
         <div className="mt-6">
           this is an image from public folder
         </div>
+        <button className="mt-4 p-3 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 cursor-pointer" onClick={()=> alert("Learn Nextjs for pro-Level")}>Learn New thing in Next js</button>
       </div>
     </>
   );
