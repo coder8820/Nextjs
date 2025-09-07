@@ -20,6 +20,7 @@ export default function Home() {
         </button>
         <div className="mt-6">
           this is an image from public folder
+          <p>Helo world</p>
         </div>
        </div>
     </>
