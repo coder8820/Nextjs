@@ -1,10 +1,10 @@
-"use client";
+// "use client";
 
 import Link from "next/link";
 
-// import Image from "next/image";
-
-export default function Home() {
+export default async function Home({ searchParams, params }) {
+  console.log(await searchParams);
+  console.log(await params);
   return (
     <>
       <div className="mx-auto p-4">
