@@ -4,8 +4,7 @@ import Link from "next/link";
 
 // import Image from "next/image";
 
-export default function Home(props) {
-  console.log(props);
+export default function Home() {
   return (
     <>
       <div className="mx-auto p-4">
