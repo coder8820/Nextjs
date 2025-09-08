@@ -11,6 +11,7 @@ export default async function Blogs({ param, searchParams }) {
         <h2>Blog 1</h2>
         <h2>Blog 2</h2>
         <h2>Blog 3</h2>
+        <h2>Blog 4</h2>
         <Link href="/">Go to Home</Link>
       </div>
     </>
