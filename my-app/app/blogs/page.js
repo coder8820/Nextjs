@@ -1,8 +1,6 @@
 import Link from "next/link";
 
-export default async function Blogs({ param, searchParams }) {
-  console.log(await param);
-  console.log(await searchParams);
+export default function Blogs() {
   return (
     <>
       <div className="mx-auto p-4">
