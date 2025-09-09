@@ -1,18 +1,12 @@
-const blogData = {
-  test: "This is test blog",
-  helo: "This is helo blog",
-  demo: "This is demo blog",
-};
-
-// app/blogs/[blogID]/page.js
-export default function BlogPage({ params }) {
-  const { blogID } = params;
-  console.log(blogID);
-
+export default async function Blog({ params }) {
+  // console.log(params);
+  let paramsObj = await params;
+  const { blogID } = await paramsObj;
+  console.log(paramsObj);
   return (
     <div>
-      <h1>Blog {blogID}</h1>
-      <p>This is the content of blog {blogContent}.</p>
+      <h1>Blog{blogID}</h1>
+      <p>This is the content of blog.</p>
     </div>
   );
 }
