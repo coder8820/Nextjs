@@ -1,13 +1,13 @@
-export default async function Blog({ params }) {
+export default async function comment({ params }) {
   // console.log(params);
   let paramsObj = await params;
-  const { blogID } = await paramsObj;
+  const { blogID, comment } = await paramsObj;
   console.log(paramsObj);
   return (
     <div>
       <h1>Blog {blogID}</h1>
       <p>
-        All comments on <b>{blogID} page</b>
+        Comment No, <i>{comment}</i> on <b>{blogID} page</b>
       </p>
     </div>
   );
