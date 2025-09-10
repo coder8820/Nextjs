@@ -9,6 +9,7 @@ export default async function comment({ params }) {
       <p>
         Comment No, <i>{comment}</i> on <b>{blogID} page</b>
       </p>
+      <p>In next js file base routing can get all parent data</p>
     </div>
   );
 }
