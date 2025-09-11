@@ -11,6 +11,11 @@ export default async function comment({ params }) {
       </p>
       <p>In next js file base routing can get all parent data</p>
       <p>Nested Routing is very easy than react router.</p>
+      <p>
+        After this course we will learn node js for backend. and i will
+        implement my project by using nextjs for frontend and nodejs for
+        backend.This will gonna amazing
+      </p>
     </div>
   );
 }
