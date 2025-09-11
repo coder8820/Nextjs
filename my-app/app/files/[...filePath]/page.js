@@ -1,5 +1,5 @@
 export default async function File({ params }) {
-  console.log(params);
+  console.log(await params);
   return (
     <div>
       <h1>Catch All Routes</h1>
