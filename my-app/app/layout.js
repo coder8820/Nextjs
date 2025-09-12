@@ -1,5 +1,8 @@
 export const metadata = {
-  title: "Next.js App",
+  title: {
+    template: "%s | Next.js App",
+    default: "Next.js App",
+  },
   description: "A simple Next.js application",
   icons: {
     icon: "/favicon.ico",
