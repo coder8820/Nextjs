@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Blogs Page",
+  description: "This is the blogs page of our Next.js application.",
+};
+
 export default function Blogs() {
   return (
     <>
