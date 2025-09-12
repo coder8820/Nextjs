@@ -1,3 +1,11 @@
+export const metadata = {
+  title: "Next.js App",
+  description: "A simple Next.js application",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
