@@ -5,11 +5,12 @@ export const metadata = {
 };
 
 export default async function File({ params }) {
-  console.log(await params);
+  const filePath = (await params.filePath?.join("/")) || "No path provided";
+  console.log(filePath);
   return (
     <div>
       <h1>Catch All Routes</h1>
-      <p>The file path is {await params.filePath}</p>
+      <p>The file path is {filePath}</p>
     </div>
   );
 }
