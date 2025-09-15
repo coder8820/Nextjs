@@ -6,7 +6,7 @@ export const metadata = {
 
 export default async function File({ params }) {
   const filePath = params.filePath?.join("/") || "No path provided";
-  console.log(filePath);
+  // console.log(filePath);
   return (
     <div>
       <h1>Catch All Routes</h1>
