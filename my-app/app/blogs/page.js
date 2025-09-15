@@ -1,10 +1,12 @@
 import Link from "next/link";
 
-export const metadata = {
-  title: "Blogs Page",
-  description: "This is the blogs page of our Next.js application.",
-};
-
+export async function generateMetadata({ params }) {
+  const { blogID } = await params;
+  return {
+    title: `Blogs ${blogID}`,
+    description: "This is the blogs page",
+  };
+}
 export default function Blogs() {
   return (
     <>
