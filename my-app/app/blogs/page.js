@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 export async function generateMetadata({ params }) {
-  const { blogID } = await params;
+  const { blogID } = params;
+  console.log("blogID:", blogID);
   return {
     title: `Blogs ${blogID}`,
     description: "This is the blogs page",
