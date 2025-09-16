@@ -14,7 +14,7 @@ export default async function File({ params }) {
       <p>The file path is {filePath}</p>
       <p>You can access any file in the files directory.</p>
       <p>For example:</p>
-      <ul className="ml-8 mb-4 bg-slate-700 p-4 rounded">
+      <ul>
         <li>/files/documents/report.pdf</li>
         <li>/files/images/photo.jpg</li>
         <li>/files/videos/movie.mp4</li>
