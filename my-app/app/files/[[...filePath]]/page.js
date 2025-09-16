@@ -10,6 +10,14 @@ export default async function File({ params }) {
     <div>
       <h1>Catch All Routes</h1>
       <p>The file path is {filePath}</p>
+      <p>You can access any file in the files directory.</p>
+      <p>For example:</p>
+      <ul>
+        <li>/files/documents/report.pdf</li>
+        <li>/files/images/photo.jpg</li>
+        <li>/files/videos/movie.mp4</li>
+        <li>/files/anything/you/want/to/access.txt</li>
+      </ul>
     </div>
   );
 }
