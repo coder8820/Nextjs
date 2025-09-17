@@ -4,6 +4,7 @@ export const metadata = {
   title: {
     absolute: "Files page",
   },
+  description: "This is the files page",
 };
 
 export default async function File({ params }) {
