@@ -2,7 +2,7 @@ export default async function comment({ params }) {
   // console.log(params);
   let paramsObj = await params;
   const { blogID, comment } = await paramsObj;
-  console.log(paramsObj);
+
   return (
     <div>
       <h1>Blog {blogID}</h1>
