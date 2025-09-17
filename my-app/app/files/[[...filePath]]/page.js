@@ -20,6 +20,12 @@ export default async function File({ params }) {
         <li>/files/videos/movie.mp4</li>
         <li>/files/anything/you/want/to/access.txt</li>
       </ul>
+      <div>
+        <p>
+          This is one of the most important next js application im learning from
+          youtube and some other plateform
+        </p>
+      </div>
       <Link href="/">go to home page</Link>
     </div>
   );
