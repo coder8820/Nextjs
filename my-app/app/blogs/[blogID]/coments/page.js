@@ -4,7 +4,7 @@ export default function Commnets({ params }) {
   return (
     <div>
       <h1>Comment {blogID}</h1>
-      <h2>All commnets on {blogID}</h2>
+      <h2>All commnets on this {blogID}</h2>
     </div>
   );
 }
