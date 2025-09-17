@@ -1,5 +1,12 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: {
+    absolute: "Home page",
+  },
+  description: "This is the home page",
+};
+
 export default async function Home({ searchParams, params }) {
   console.log(await searchParams);
   console.log(await params);
