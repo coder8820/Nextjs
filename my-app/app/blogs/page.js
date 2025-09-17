@@ -4,7 +4,7 @@ export async function generateMetadata({ params }) {
   const { blogID } = params;
   console.log("blogID:", blogID);
   return {
-    title: `Blogs`,
+    title: `Blogs - ${blogID}`,
     description: "This is the blogs page",
   };
 }

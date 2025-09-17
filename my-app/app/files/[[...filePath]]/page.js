@@ -2,13 +2,14 @@ import Link from "next/link";
 
 export const metadata = {
   title: {
-    absolute: "Files page",
+    absolute: `Files page`,
   },
   description: "This is the files page",
 };
 
 export default async function File({ params }) {
-  const filePath = (await params.filePath?.join("/")) || "No path provided";
+  // const { filePath } = (await params.filePath?.join("/")) || "No path provided";
+  const { filePath } = await params.filePath;
   return (
     <div>
       <h1>Catch All Routes</h1>
