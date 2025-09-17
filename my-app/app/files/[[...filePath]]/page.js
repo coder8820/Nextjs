@@ -8,8 +8,7 @@ export const metadata = {
 };
 
 export default async function File({ params }) {
-  // const { filePath } = (await params.filePath?.join("/")) || "No path provided";
-  const { filePath } = await params.filePath;
+  const { filePath } = (await params.filePath?.join("/")) || "No path provided";
   return (
     <div>
       <h1>Catch All Routes</h1>
