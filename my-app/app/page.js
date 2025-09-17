@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ComponentPage from "./_components/page";
 
 export const metadata = {
   title: {
@@ -20,6 +21,7 @@ export default async function Home({ searchParams, params }) {
         <h1>Welcome to Technical Agencies!</h1>
         <p>In the name of allah the most benificent and the most merciful</p>
       </div>
+      <ComponentPage />
     </>
   );
 }
