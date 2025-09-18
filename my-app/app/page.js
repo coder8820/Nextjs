@@ -20,6 +20,7 @@ export default async function Home({ searchParams, params }) {
         | <Link href="/files">files</Link>
         <h1>Welcome to Technical Agencies!</h1>
         <p>In the name of allah the most benificent and the most merciful</p>
+        <button>Login</button>
       </div>
       <ComponentPage />
     </>
