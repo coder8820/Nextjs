@@ -28,6 +28,7 @@ export default function ComponentPage() {
         suscipit dicta. Porro expedita accusamus eius tempore quos quod sapiente
         vitae dolor. Dignissimos.
       </p>
+      <button>Course Register</button>
     </div>
   );
 }
