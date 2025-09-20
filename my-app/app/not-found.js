@@ -5,6 +5,7 @@ export default function () {
     <div>
       <h1>Page not Found!</h1>
       <p>could not fount the page you are looking for!</p>
+      <button>Go Back</button>
     </div>
   );
 }
