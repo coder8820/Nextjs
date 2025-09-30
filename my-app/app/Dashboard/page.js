@@ -9,6 +9,8 @@ export default function Dashboard() {
   return (
     <div>
       <h1>This is Dashboard page</h1>
+      <p>Welcome to the dashboard!</p>
+      <button>Administration</button>
     </div>
   );
 }
