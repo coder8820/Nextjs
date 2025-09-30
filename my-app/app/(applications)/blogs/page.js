@@ -8,6 +8,11 @@ export async function generateMetadata({ params }) {
     description: "This is the blogs page",
   };
 }
+
+export async function generateStaticParams() {
+  return [{ blogID: "blog1" }, { blogID: "blog2" }, { blogID: "blog3" }];
+}
+
 export default function Blogs() {
   return (
     <>
