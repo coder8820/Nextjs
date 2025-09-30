@@ -49,7 +49,7 @@ export default function HeaderPage() {
             cursor: "pointer",
           }}
         >
-          FutureCorp
+          proCoder
         </h2>
 
         {/* Links */}
