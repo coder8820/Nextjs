@@ -18,7 +18,7 @@ export default async function Home({ searchParams, params }) {
         <Link href="/about">about</Link> |{" "}
         <Link href="/services">services</Link>｜<Link href="/blogs">Blogs</Link>{" "}
         | <Link href="/files">files</Link>| <Link href="/contact">Contact</Link>{" "}
-        | <Link href="/dashboard">Dashboard</Link>
+        | <Link href="/Dashboard">Dashboard</Link>
         <br />
         <h1>Welcome to Technical Agencies!</h1>
         <p>
