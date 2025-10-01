@@ -1,11 +1,14 @@
+import FooterPage from "../(marketing)/FooterPage";
+import HeaderPage from "../(marketing)/HeaderPage";
+
 export default function RootLayout({ children }) {
   return (
     <>
-      <header style={{ background: "orange", color: "white", padding: 10 }}>
+      <header>
         <HeaderPage />
       </header>
       {children}
-      <footer style={{ background: "green", padding: 10, color: "white" }}>
+      <footer>
         <FooterPage />
       </footer>
     </>
