@@ -17,7 +17,7 @@ export default function Navbar() {
         display: "flex",
         justifyContent: "space-around",
         alignItems: "center",
-        padding: "15px 30px",
+        padding: "5px 30px",
         background: "rgba(15, 23, 42, 0.6)",
         backdropFilter: "blur(12px)",
         borderBottom: "1px solid rgba(56,189,248,0.2)",
