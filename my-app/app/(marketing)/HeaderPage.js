@@ -1,59 +1,124 @@
-// app/header/page.js (Next.js 13+ App Router)
-// or pages/header.js (Next.js 12)
+// app/components/Navbar.js (Next.js 13+ App Router)
+// or components/Navbar.js (Next.js 12)
 
 "use client";
+import { useState } from "react";
 
-export default function HeaderPage() {
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div
+    <nav
       style={{
-        minHeight: "100vh",
-        background:
-          "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0a0f1f 100%)",
-        color: "#f8fafc",
-        fontFamily: "Arial, sans-serif",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
         display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "space-around",
         alignItems: "center",
-        textAlign: "center",
-        padding: "20px",
-        position: "relative",
-        overflow: "hidden",
+        padding: "15px 30px",
+        background: "rgba(15, 23, 42, 0.6)",
+        backdropFilter: "blur(12px)",
+        borderBottom: "1px solid rgba(56,189,248,0.2)",
+        zIndex: 1,
       }}
     >
-      {/* Navigation */}
-      <nav
+      {/* Logo */}
+      <h1
         style={{
-          position: "absolute",
-          top: "0",
-          left: "0",
-          width: "100%",
-          margin: "0 auto",
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          padding: "20px 40px",
-          background: "rgba(15, 23, 42, 0.7)",
-          backdropFilter: "blur(10px)",
-          borderBottom: "1px solid rgba(56,189,248,0.2)",
+          fontSize: "26px",
+          fontWeight: "bold",
+          background:
+            "linear-gradient(90deg, #38bdf8, #6366f1, #ec4899, #38bdf8)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          animation: "moveGradient 6s linear infinite",
+          cursor: "pointer",
         }}
       >
-        {/* Logo */}
-        <h2
-          style={{
-            fontSize: "24px",
-            fontWeight: "bold",
-            color: "#38bdf8",
-            textShadow: "0 0 10px rgba(56,189,248,0.6)",
-            cursor: "pointer",
-          }}
-        >
-          proCoder
-        </h2>
+        proCoder
+      </h1>
 
-        {/* Links */}
-        <div style={{ display: "flex", gap: "30px" }}>
+      {/* Desktop Links */}
+      <div
+        style={{
+          display: "flex",
+          gap: "30px",
+        }}
+        className="desktop-menu"
+      >
+        {["Home", "About", "Services", "Contact"].map((link) => (
+          <a
+            key={link}
+            href={`#${link.toLowerCase()}`}
+            style={{
+              color: "#cbd5e1",
+              fontSize: "16px",
+              textDecoration: "none",
+              transition: "all 0.3s ease",
+              display: "none", // hidden by default (we’ll show via media query)
+            }}
+            className="nav-link"
+            onMouseOver={(e) => {
+              e.currentTarget.style.color = "#38bdf8";
+              e.currentTarget.style.textShadow =
+                "0 0 12px rgba(56,189,248,0.8)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.color = "#cbd5e1";
+              e.currentTarget.style.textShadow = "none";
+            }}
+          >
+            {link}
+          </a>
+        ))}
+      </div>
+
+      {/* Hamburger Icon (Mobile) */}
+      <div
+        onClick={() => setMenuOpen(!menuOpen)}
+        style={{
+          width: "28px",
+          height: "20px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          cursor: "pointer",
+        }}
+        className="hamburger"
+      >
+        {[...Array(3)].map((_, i) => (
+          <span
+            key={i}
+            style={{
+              height: "3px",
+              width: "100%",
+              background: "#38bdf8",
+              borderRadius: "2px",
+              transition: "all 0.3s ease",
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div
+          style={{
+            position: "absolute",
+            top: "60px",
+            right: "20px",
+            background: "rgba(15,23,42,0.95)",
+            borderRadius: "12px",
+            padding: "20px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "15px",
+            boxShadow: "0 0 20px rgba(56,189,248,0.3)",
+          }}
+          className="mobile-menu"
+        >
           {["Home", "About", "Services", "Contact"].map((link) => (
             <a
               key={link}
@@ -67,7 +132,7 @@ export default function HeaderPage() {
               onMouseOver={(e) => {
                 e.currentTarget.style.color = "#38bdf8";
                 e.currentTarget.style.textShadow =
-                  "0 0 10px rgba(56,189,248,0.8)";
+                  "0 0 12px rgba(56,189,248,0.8)";
               }}
               onMouseOut={(e) => {
                 e.currentTarget.style.color = "#cbd5e1";
@@ -78,87 +143,30 @@ export default function HeaderPage() {
             </a>
           ))}
         </div>
-      </nav>
+      )}
 
-      {/* Glow Backgrounds */}
-      <div
-        style={{
-          position: "absolute",
-          top: "-100px",
-          left: "-100px",
-          width: "400px",
-          height: "400px",
-          background:
-            "radial-gradient(circle, rgba(56,189,248,0.35), transparent 70%)",
-          borderRadius: "50%",
-          filter: "blur(120px)",
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          bottom: "-120px",
-          right: "-120px",
-          width: "500px",
-          height: "500px",
-          background:
-            "radial-gradient(circle, rgba(139,92,246,0.35), transparent 70%)",
-          borderRadius: "50%",
-          filter: "blur(150px)",
-        }}
-      />
-
-      {/* Hero Content */}
-      <h1
-        style={{
-          fontSize: "52px",
-          fontWeight: "bold",
-          marginBottom: "16px",
-          textShadow:
-            "0 0 15px rgba(56,189,248,0.6), 0 0 30px rgba(56,189,248,0.4)",
-        }}
-      >
-        Welcome to <span style={{ color: "#38bdf8" }}>FutureCorp</span>
-      </h1>
-
-      <p
-        style={{
-          maxWidth: "600px",
-          fontSize: "18px",
-          lineHeight: 1.6,
-          marginBottom: "30px",
-          color: "#cbd5e1",
-        }}
-      >
-        Building cutting-edge digital experiences powered by AI, creativity, and
-        futuristic design.
-      </p>
-
-      <button
-        style={{
-          padding: "14px 28px",
-          borderRadius: "12px",
-          border: "none",
-          background: "linear-gradient(90deg,#38bdf8,#6366f1)",
-          color: "#fff",
-          fontSize: "16px",
-          fontWeight: "bold",
-          cursor: "pointer",
-          boxShadow: "0 0 20px rgba(56,189,248,0.4)",
-          transition: "all 0.3s ease",
-        }}
-        onMouseOver={(e) => {
-          e.currentTarget.style.transform = "scale(1.08)";
-          e.currentTarget.style.boxShadow =
-            "0 0 30px rgba(56,189,248,0.8), 0 0 50px rgba(99,102,241,0.6)";
-        }}
-        onMouseOut={(e) => {
-          e.currentTarget.style.transform = "scale(1)";
-          e.currentTarget.style.boxShadow = "0 0 20px rgba(56,189,248,0.4)";
-        }}
-      >
-        🚀 Join Now
-      </button>
-    </div>
+      {/* Animations + Media Queries */}
+      <style jsx>{`
+        @keyframes moveGradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          100% {
+            background-position: 100% 50%;
+          }
+        }
+        @media (min-width: 768px) {
+          .nav-link {
+            display: block !important;
+          }
+          .hamburger {
+            display: none !important;
+          }
+          .mobile-menu {
+            display: none !important;
+          }
+        }
+      `}</style>
+    </nav>
   );
 }
