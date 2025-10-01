@@ -107,10 +107,10 @@ export default function Navbar() {
         <div
           style={{
             position: "absolute",
-            top: "60px",
-            right: "20px",
+            top: "75px",
+            right: "60px",
             background: "rgba(15,23,42,0.95)",
-            borderRadius: "12px",
+            borderRadius: "5px",
             padding: "20px",
             display: "flex",
             flexDirection: "column",
