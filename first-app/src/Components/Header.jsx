@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Header() {
@@ -6,9 +7,15 @@ export default function Header() {
       <main>
         <h2>proCoder</h2>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <Link href="/">
+            <li>Home</li>
+          </Link>
+          <Link href="/about">
+            <li>About</li>
+          </Link>
+          <Link href="course">
+            <li>Course</li>
+          </Link>
           <li>Blog</li>
         </ul>
       </main>
