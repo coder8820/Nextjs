@@ -42,14 +42,36 @@ a {
 }
 
 
-.main{
+main{
   max-width: 1040px;
-  background-color: #b64444;
   margin: 0 auto;
-  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+header{
+  background-color: #4444b6;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+header ul{
+  list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
+  gap: 20px;
+}
+header h2{
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+header ul li{
+  cursor: pointer;
+}
+header ul li:hover{
+  text-decoration: underline;
 }
