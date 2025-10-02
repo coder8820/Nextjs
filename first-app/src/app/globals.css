@@ -40,3 +40,16 @@ a {
     color-scheme: dark;
   }
 }
+
+
+.main{
+  max-width: 1040px;
+  background-color: #b64444;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
