@@ -1,4 +1,5 @@
 import Container from "./Container";
+import Link from "next/link";
 import styles from "@/styles/header.module.css";
 import { FiSearch, FiShoppingCart } from "react-icons/fi";
 
@@ -36,8 +37,12 @@ const NavBar = () => {
       {/* Navigation links */}
       <ul className="flex items-center gap-3 font-semibold">
         {/* import React from "react"; */}
-        <li className={`${styles.navLink}`}>Home</li>
-        <li className={`${styles.navLink}`}>store</li>
+        <li className={`${styles.navLink}`}>
+          <Link href="./">Home</Link>
+        </li>
+        <li className={`${styles.navLink}`}>
+          <Link href="./store">store</Link>
+        </li>
       </ul>
       {/* cart icon */}
       <div className="relative">
