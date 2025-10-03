@@ -46,7 +46,7 @@ const NavBar = () => {
           className={`${styles.cartBadge} absolute top-[-15px] right-[-20px] bg-pink-500
           text-white text-xs font-bold w-5 h-5 flex items-center justity-between rounded-full`}
         >
-          3
+          03
         </span>
       </div>
     </nav>
