@@ -7,6 +7,7 @@ export default function HeroSection() {
   return (
     <Container>
       <section className={styles.hero}>
+        {/* text section */}
         <div className={`${styles.textSection}`}>
           <h1>
             One stop solution <span className="text-pink-500">E-store</span>
@@ -15,8 +16,9 @@ export default function HeroSection() {
           <p>Exclusive details just for you!</p>
           <button className={styles.ctaButton}>Shop Now</button>
         </div>
+        {/* image slider section */}
+        <Slider />
       </section>
-      <Slider />
     </Container>
   );
 }

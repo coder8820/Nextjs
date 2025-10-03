@@ -23,14 +23,13 @@
 }
 
 .ctaButton{
-    background-color: #fff;
     color: #ec4899;
     padding: 075rem 1.5rem;
     font-size: 1.125rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background: color #f2f2f2;
+    background-color: #f2f2f2;
 }
 
 
