@@ -1,12 +1,12 @@
 import React from "react";
 import Slider from "./Slider";
 import Container from "../Container";
-import styles from "@/styles/header.module.css";
+import styles from "@/styles/home/Hero.module.css";
 
 export default function HeroSection() {
   return (
     <Container>
-      <section className={`${styles.hero}`}>
+      <section className={styles.hero}>
         <div className={`${styles.textSection}`}>
           <h1>
             One stop solution <span className="text-pink-500">E-store</span>
