@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "./Slider";
 import Container from "../Container";
 import styles from "@/styles/home/Hero.module.css";
@@ -14,7 +13,7 @@ export default function HeroSection() {
           </h1>
           <p>Discover the latest headphones, earphones, mobiles tablets etc.</p>
           <p>Exclusive details just for you!</p>
-          <button className={styles.ctaButton}>Shop Now</button>
+          <button className={`${styles.ctaButton}`}>Shop Now</button>
         </div>
         {/* image slider section */}
         <Slider />

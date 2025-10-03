@@ -24,14 +24,17 @@
 
 .ctaButton{
     color: #ec4899;
-    padding: 075rem 1.5rem;
-    font-size: 1.125rem;
+    padding: 10px 15px;
+    font-size: 16px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     background-color: #f2f2f2;
 }
-
+.ctaButton:hover{
+    background-color: #f726c3;
+    color: white;
+}
 
 .imageSection{
     flex: 1;
