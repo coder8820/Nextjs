@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "../Container";
+import Image from "next/image";
 
 const API_URL = "https://fakestoreapi.com/products";
 
@@ -19,11 +20,15 @@ export default function RecentlyAdded() {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetchProducts();
   }, []);
   if (products.length === 0) {
-    return <div>Loading...</div>;
+    return (
+      <div className="text-gray-100">
+        <p>Loading products...</p>
+      </div>
+    );
   }
   return (
     <div className="bg-gray-100 p-3">
@@ -37,9 +42,11 @@ export default function RecentlyAdded() {
               key={product.id}
               className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow"
             >
-              <img
+              <Image
                 src={product.image}
                 alt={product.title}
+                width={200}
+                height={200}
                 className="w-full h-48 object-contain mb-4"
               />
               <h3 className="text-lg font-semibold mb-2">{product.title}</h3>
