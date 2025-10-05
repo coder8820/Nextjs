@@ -1,5 +1,5 @@
-"use client";
 import Image from "next/image";
+import "@/styles/productbox.module.css";
 
 export default function ProductBox({ products }) {
   console.log(products);
