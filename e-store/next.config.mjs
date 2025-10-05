@@ -5,8 +5,14 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "storage.googleapis.com",
+        // port: "",
+        // pathname: "/fir-auth-1c3bc.appspot.com/**",
+      },
+      {
+        protocol: "https",
+        hostname: "fakestoreapi.com",
         port: "",
-        pathname: "/fir-auth-1c3bc.appspot.com/**",
+        pathname: "/img/**",
       },
     ],
   },
