@@ -49,8 +49,11 @@ export default function RecentlyAdded() {
                 height={200}
                 className="w-full h-48 object-contain mb-4"
               />
-              <h3 className="text-lg font-semibold mb-2">{product.title}</h3>
               <p className="text-gray-700 font-bold">${product.price}</p>
+              {/* Add to cart button */}
+              <button className="mt-2 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors">
+                Add to Cart
+              </button>
             </div>
           ))}
         </div>
