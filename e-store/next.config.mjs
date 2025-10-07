@@ -11,7 +11,7 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "fakestoreapi.com",
-        domains: ["fakestoreapi.com"], // allow external images from fakestoreapi.com
+        //domains: ["fakestoreapi.com"], // allow external images from fakestoreapi.com
         // port: "",
         // pathname: "/img/**",
       },
