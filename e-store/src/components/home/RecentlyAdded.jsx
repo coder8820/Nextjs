@@ -1,28 +1,26 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import Container from "../Container";
-// import ProductBox from "../ProductBox";
 
 const API_URL = "https://fakestoreapi.com/products";
 
 export default function RecentlyAdded() {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const fetchProducts = async () => {
     try {
       const response = await fetch(API_URL);
       const data = await response.json();
-      setProducts(data);
-      console.log(data);
+      return data; // ✅ Return fetched data
     } catch (error) {
       console.error("Error fetching products:", error);
+      return []; // ✅ Return empty array on error
     }
   };
-
-  // State for loading and error handling
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -30,42 +28,36 @@ export default function RecentlyAdded() {
     const loadProducts = async () => {
       try {
         const data = await fetchProducts();
-        if (isMounted) {
-          setProducts(data);
-        }
+        if (isMounted) setProducts(data);
       } catch (error) {
-        if (isMounted) {
-          setError(error.message);
-        }
+        if (isMounted) setError(error.message);
       } finally {
-        if (isMounted) {
-          setLoading(false);
-        }
+        if (isMounted) setLoading(false);
       }
     };
 
     loadProducts();
-
     return () => {
       isMounted = false;
     };
   }, []);
+
+  if (loading) return <p className="text-center py-10">Loading products...</p>;
+  if (error) return <p className="text-center text-red-500">Error: {error}</p>;
+
   return (
     <div className="bg-gray-100 p-3">
       <Container>
         <h2 className="text-3xl font-bold mt-4 mb-8 text-center">
           Recently Added Products
         </h2>
-        {/* <ProductBox products={products} />
-         */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-          {products.map((product) => (
+          {products.map((product, index) => (
             <div
-              key={product.id}
+              key={index}
               className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow"
             >
-              {/* Wrapper div with relative positioning and fixed height */}
               <div className="relative w-full h-48 mb-4">
                 <Image
                   src={product.image}
