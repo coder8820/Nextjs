@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import Container from "../Container";
 import ProductBox from "./ProductBox";
 
-const API_URL = "https://fakestoreapi.com/products";
+const API_URL = "https://fakestoreapi.com/products?limit=10";
 
 export default function RecentlyAdded() {
   const [products, setProducts] = useState([]);
