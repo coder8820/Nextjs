@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "@/styles/productbox.module.css";
 
 export default function ProductBox({ products = [] }) {
-  // ✅ Safety check to prevent rendering errors
+  //  Safety check to prevent rendering errors
   if (!Array.isArray(products) || products.length === 0) {
     return <p className="text-center text-gray-500">No products available</p>;
   }
