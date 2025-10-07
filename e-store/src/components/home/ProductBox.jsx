@@ -17,7 +17,7 @@ export default function ProductBox({ products = [] }) {
       {products.map((product, index) => (
         <div
           key={index}
-          className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow"
+          className={`bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow `}
         >
           {/* Product Image */}
           <div className={`relative w-full h-48 mb-4 ${styles.productImage}`}>
