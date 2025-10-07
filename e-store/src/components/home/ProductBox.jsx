@@ -12,7 +12,7 @@ export default function ProductBox({ products = [] }) {
 
   return (
     <div
-      className={`${styles.card} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6`}
+      className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6`}
     >
       {products.map((product, index) => (
         <div
@@ -31,8 +31,8 @@ export default function ProductBox({ products = [] }) {
           </div>
 
           {/* Product Info */}
-          <h3 className="text-gray-800 font-semibold mb-2 line-clamp-2">
-            {product.title}
+          <h3 className="text-lg font-semibold mb-2 text-center">
+            {product.title.split(" ").slice(0, 3).join(" ")}
           </h3>
           <p className="text-gray-700 font-bold">${product.price}</p>
 
