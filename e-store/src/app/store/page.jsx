@@ -18,13 +18,13 @@ const CategoryListing = async () => {
   console.log(categories);
   return (
     <div>
-      <div className="col-span-1 border-r-2 pr-5">
-        <h2 className="font-bold text-2xl mb-5">Categories</h2>
+      <div className="col-span-1 border-r-2 pr-5 mt-5">
+        <h2 className="font-bold text-2xl mb-5 text-green-700">Categories</h2>
         <ul className="space-y-3">
           {categories.map((category) => (
             <li
               key={category}
-              className="cursor-pointer hover:underline uppercase"
+              className="cursor-pointer hover:underline uppercase border-radius: 0.375rem; px-3 py-1 bg-gray-200 bg:hover:bg-gray-400 transition hover:text-pink-500 "
             >
               {category}
             </li>
@@ -41,8 +41,8 @@ const ProductListing = async () => {
 
   return (
     <div className="col-span-4">
-      <h2 className="font-bold text-2xl mb-5">Products</h2>
-      <div className="grid grid-cols-3 gap-5">
+      <h2 className="font-bold text-2xl mb-5 mt-5 ">Products</h2>
+      <div className="grid grid-cols-2 grid-cols-3 gap-5">
         {products.map((product) => (
           <div key={product.id} className="border p-3 rounded">
             <img
