@@ -40,7 +40,7 @@ const ProductListing = async () => {
 
   return (
     <div className="col-span-4">
-      <h2 className="font-bold text-2xl mb-5 mt-5 ">Products</h2>
+      <h2 className="font-bold text-2xl mb-5 mt-5 uppercase pl-5">Products:</h2>
       <div className="grid grid-cols-2 grid-cols-3 gap-5">
         {products.map((product) => (
           <div key={product.id} className="border p-3 rounded">
