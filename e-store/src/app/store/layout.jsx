@@ -1,5 +1,4 @@
 import Container from "@/components/Container";
-import React from "react";
 import { getCategories } from "@/styles/Library";
 
 export default function StoreLayout({ children }) {
