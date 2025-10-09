@@ -1,15 +1,11 @@
 import Container from "@/components/Container";
 import React from "react";
 import { getCategories, getProducts } from "@/styles/Library";
-import ProductBox from "@/components/home/ProductBox";
 
 export default function StorePage() {
   return (
     <div>
-      <Container className={`grid grid-cols-5`}>
-        <CategoryListing />
-        <ProductListing />
-      </Container>
+      <ProductListing />
     </div>
   );
 }
