@@ -15,7 +15,6 @@ export default function StorePage() {
 
 const CategoryListing = async () => {
   const categories = await getCategories();
-  console.log(categories);
   return (
     <div>
       <div className="col-span-1 border-r-2 pr-5 mt-5">
