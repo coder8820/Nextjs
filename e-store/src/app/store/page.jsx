@@ -1,9 +1,12 @@
+import Container from "@/components/Container";
 import { getProducts } from "@/styles/Library";
 
 export default function StorePage() {
   return (
     <div>
-      <ProductListing />
+      <Container className={`grid grid-cols-5`}>
+        <ProductListing />
+      </Container>
     </div>
   );
 }
