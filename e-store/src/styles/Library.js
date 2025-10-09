@@ -3,7 +3,7 @@ const getCategories = async () => {
     const res = await fetch("https://fakestoreapi.com/products/categories");
     if (!res.ok) throw new Error("Failed to fetch categories");
     const data = await res.json();
-    return data; // no .categories needed
+    return data;
   } catch (error) {
     console.error("Error fetching categories:", error);
     return [];
