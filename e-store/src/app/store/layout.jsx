@@ -18,7 +18,7 @@ const CategoryListing = async () => {
     <div>
       <div className="col-span-1 border-r-2 pr-5 mt-5">
         <h2 className="font-bold text-2xl mb-5 text-green-700">Categories</h2>
-        <ul className="space-y-3">
+        <ul className="space-y-3 text-gray-700">
           {categories.map((category) => (
             <li
               key={category}
