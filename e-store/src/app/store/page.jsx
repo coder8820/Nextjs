@@ -26,7 +26,9 @@ const ProductListing = async () => {
               alt={product.title}
               className="w-full h-48 object-contain mb-3"
             />
-            <h3 className="font-semibold text-lg">{product.title}</h3>
+            <h3 className="font-semibold text-lg">
+              {product.title.split(" ").slice(0, 3).join(" ") + "..."}
+            </h3>
             <p className="text-gray-600">${product.price}</p>
             {/* add cart btn */}
             <button className=" cursor-pointer mt-3 w-full bg-pink-500 text-white py-2 rounded hover:bg-pink-600 transition">
