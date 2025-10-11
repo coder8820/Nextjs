@@ -4,9 +4,9 @@ import { getCategories } from "@/styles/Library";
 export default function StoreLayout({ children }) {
   return (
     <div>
-      <Container className="grid grid-cols-5 w-full min-h-screen">
+      <Container className="grid grid-cols-5 min-h-screen bg-blue-200">
         <CategoryListing />
-        <div className="col-span-4 pl-5 m-auto w-full">{children}</div>
+        <div className="col-span-4 pl-5">{children}</div>
       </Container>
     </div>
   );
@@ -18,7 +18,7 @@ const CategoryListing = async () => {
   return (
     <div className="col-span-1 border-r-2 pr-5 mt-5">
       <h2 className="font-bold text-2xl mb-5 text-green-700 uppercase">
-        Categories
+        Categories:
       </h2>
       <ul className="space-y-3 text-gray-700">
         {categories.map((category) => (
