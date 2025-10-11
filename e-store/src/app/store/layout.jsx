@@ -4,7 +4,7 @@ import { getCategories } from "@/styles/Library";
 export default function StoreLayout({ children }) {
   return (
     <div>
-      <Container className="grid grid-cols-5 min-h-screen bg-blue-200">
+      <Container className="grid grid-cols-5 min-h-screen">
         <CategoryListing />
         <div className="col-span-4 pl-5">{children}</div>
       </Container>

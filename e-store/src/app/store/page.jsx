@@ -4,7 +4,7 @@ import { getProducts } from "@/styles/Library";
 export default function StorePage() {
   return (
     <div>
-      <Container className={`grid grid-cols-5 `}>
+      <Container className={`grid grid-cols-5`}>
         <ProductListing />
       </Container>
     </div>
